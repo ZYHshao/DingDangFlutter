@@ -36,6 +36,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.2"
+  flare_dart:
+    dependency: transitive
+    description:
+      name: flare_dart
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.4.3"
+  flare_flutter:
+    dependency: "direct main"
+    description:
+      name: flare_flutter
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.5.4"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -46,6 +60,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  lottie_flutter:
+    dependency: "direct main"
+    description:
+      name: lottie_flutter
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.0"
   matcher:
     dependency: transitive
     description:
@@ -67,6 +88,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.6.2"
+  path_drawing:
+    dependency: transitive
+    description:
+      name: path_drawing
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.4"
   pedantic:
     dependency: transitive
     description:
@@ -144,3 +172,4 @@ packages:
     version: "2.0.8"
 sdks:
   dart: ">=2.2.2 <3.0.0"
+  flutter: ">=0.7.3 <2.0.0"

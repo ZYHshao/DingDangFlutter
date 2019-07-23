@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart_language//home.dart';
+import 'simple_widget/home.dart';
+import 'muti_widget/home.dart';
+import 'animation/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,9 +53,15 @@ class _MyAppHomeState extends State<_MyAppHome> {
         ),
         BottomNavigationBarItem(
             icon: Icon(Icons.crop),
-            title: Text("布局容器")
+            title: Text("高级组件")
         ),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            title: Text("动画与手势")
+        ),
+
       ],
+      type: BottomNavigationBarType.fixed,
       currentIndex: _selectedIndex,
       selectedItemColor: Colors.amber[800],
       onTap: (int index){
@@ -64,18 +73,11 @@ class _MyAppHomeState extends State<_MyAppHome> {
   }
 
   List<Widget> _buildWidgetOptions() {
-    const TextStyle optionStyle =
-    TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
     List<Widget> _widgetOptions = <Widget>[
+      DartLanguageHomeView(),
       SingleWidgetHomeView(),
-      Text(
-        'Index 1: Business',
-        style: optionStyle,
-      ),
-      Text(
-        'Index 2: Business',
-        style: optionStyle,
-      ),
+      MutiWidgetHomeView(),
+      AnimationHomeView()
     ];
     return _widgetOptions;
   }

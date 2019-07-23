@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'view/about_var.dart';
-import 'view/var_type.dart';
-import 'view/string_type.dart';
-import 'view/bool_type.dart';
-import 'view/list_type.dart';
-import 'view/map_type.dart';
-import 'view/operation.dart';
-import 'view/flow_control.dart';
-import 'view/function.dart';
-import 'view/class.dart';
-import 'view/enum.dart';
-import 'view/mixin.dart';
+import 'view/scale.dart';
+import 'view/color.dart';
+import 'view/rotate.dart';
+import 'view/curve.dart';
+import 'view/list.dart';
+import 'view/hero.dart';
+import 'view/listener.dart';
+import 'view/gesture.dart';
+import 'view/lottie.dart';
+import 'view/flare.dart';
+import 'view/refresh.dart';
 
-class DartLanguageHomeView extends StatelessWidget {
+class AnimationHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    List<String> _titles = ["关于变量", "数值类型", "字符串类型", "布尔类型", "列表类型", "字典类型", "运算符", "流程控制语句", "函数", "关于类", "枚举类型", "Mixin"];
+    List<String> _titles = ["缩放动画", "颜色渐变动画", "旋转动画", "弹性动画", "列表动画", "共享元素动画", "触摸事件", "手势事件", "Lottie动画", "Flare动画", "列表交互"];
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
@@ -36,29 +35,27 @@ class DartLanguageHomeView extends StatelessWidget {
                   .push(MaterialPageRoute(builder: (BuildContext context) {
                 switch (index) {
                   case 0:
-                    return AboutVarView();
+                    return ScaleAnimationView();
                   case 1:
-                    return VarTypeView();
+                    return ColorAnimationView();
                   case 2:
-                    return VarStringView();
+                    return RotateAnimationView();
                   case 3:
-                    return VarBoolView();
+                    return CurveAnimationView();
                   case 4:
-                    return ListTypeView();
+                    return ListAnimationView();
                   case 5:
-                    return MapTypeView();
+                    return HeroAnimationView();
                   case 6:
-                    return OperationView();
+                    return ListenerView();
                   case 7:
-                    return FlowControlView();
+                    return GestureView();
                   case 8:
-                    return FunctionView();
+                    return LottieView();
                   case 9:
-                    return ClassView();
+                    return FlareView();
                   case 10:
-                    return EnumView();
-                  case 11:
-                    return MixinView();
+                    return RefreshViewView();
                   default:
                     return Container();
                 }
